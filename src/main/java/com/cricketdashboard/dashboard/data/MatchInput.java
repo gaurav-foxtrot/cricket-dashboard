@@ -19,8 +19,6 @@ public class MatchInput {
     private String margin;
     private String method;
     private String playerOfMatch;
-    private String team1Players;
-    private String team2Players;
     private String umpire1;
     private String umpire2;
     public String getId() {
@@ -118,18 +116,6 @@ public class MatchInput {
     }
     public void setPlayerOfMatch(String playerOfMatch) {
         this.playerOfMatch = playerOfMatch;
-    }
-    public String getTeam1Players() {
-        return team1Players;
-    }
-    public void setTeam1Players(String team1Players) {
-        this.team1Players = team1Players;
-    }
-    public String getTeam2Players() {
-        return team2Players;
-    }
-    public void setTeam2Players(String team2Players) {
-        this.team2Players = team2Players;
     }
     public String getUmpire1() {
         return umpire1;

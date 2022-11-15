@@ -1,8 +1,13 @@
 package com.cricketdashboard.dashboard.data;
 
+import javax.sql.DataSource;
+
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
+import org.springframework.batch.item.database.JdbcBatchItemWriter;
+import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
@@ -47,12 +52,16 @@ public MatchDataProcessor processor() {
 
 @Bean
 public JdbcBatchItemWriter<Match> writer(DataSource dataSource) {
-  return new JdbcBatchItemWriterBuilder<Person>()
+  return new JdbcBatchItemWriterBuilder<Match>()
     .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-    .sql("INSERT INTO people (first_name, last_name) VALUES (:firstName, :lastName)")
-    .dataSource(dataSource)
-    .build();
+    .sql("INSERT INTO match (id, city, date, season, match_number, team1, team2, venue, toss_winner, toss_decision, super_over, winning_team, won_by, margin, method, player_of_match, umpire1, umpire2 ) "
+    + " VALUES (:id, :city, :date, :season, :matchNumber, :team1, :team2, :venue, :tossWinner, :tossDecision, :superOver, :winningTeam, :wonBy, :margin, :method, playerOfMatch, :umpire1, :umpire2)")
+.dataSource(dataSource).build();
 }
 
 
 }
+
+
+// id,city,date,Season,matchNumber,team1,team2,venue,tossWinner,tossDecision,SuperOver,winningTeam,wonBy,margin,method,playerOfMatch,umpire1,umpire2,
+    

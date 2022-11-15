@@ -3,24 +3,24 @@ package com.cricketdashboard.dashboard.data;
 import java.time.LocalDate;
 
 public class MatchInput {
-    private String id;
-    private String city;
-    private String date;
-    private String Season;
-    private String matchNumber;
-    private String team1;
-    private String team2;
-    private String venue;
-    private String tossWinner;
-    private String tossDecision;
-    private String SuperOver;
-    private String winningTeam;
-    private String wonBy;
-    private String margin;
-    private String method;
-    private String playerOfMatch;
-    private String umpire1;
-    private String umpire2;
+         private String id;
+         private String city;
+         private String date;
+         private String season;
+         private String matchNumber;
+         private String team1;
+         private String team2;
+         private String venue;
+         private String tossWinner;
+         private String tossDecision;
+         private String superOver;
+         private String winningTeam;
+         private String wonBy;
+         private String margin;
+         private String method;
+         private String playerOfMatch;
+         private String umpire1;
+         private String umpire2;
     public String getId() {
         return id;
     }
@@ -39,12 +39,7 @@ public class MatchInput {
     public void setDate(String date) {
         this.date = date;
     }
-    public String getSeason() {
-        return Season;
-    }
-    public void setSeason(String season) {
-        Season = season;
-    }
+
     public String getMatchNumber() {
         return matchNumber;
     }
@@ -81,12 +76,7 @@ public class MatchInput {
     public void setTossDecision(String tossDecision) {
         this.tossDecision = tossDecision;
     }
-    public String getSuperOver() {
-        return SuperOver;
-    }
-    public void setSuperOver(String superOver) {
-        SuperOver = superOver;
-    }
+    
     public String getWinningTeam() {
         return winningTeam;
     }
@@ -128,6 +118,18 @@ public class MatchInput {
     }
     public void setUmpire2(String umpire2) {
         this.umpire2 = umpire2;
+    }
+    public String getSeason() {
+        return season;
+    }
+    public void setSeason(String season) {
+        this.season = season;
+    }
+    public String getSuperOver() {
+        return superOver;
+    }
+    public void setSuperOver(String superOver) {
+        this.superOver = superOver;
     }
 
     

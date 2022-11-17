@@ -41,9 +41,11 @@ public class TeamController {
     }
     @GetMapping("/home/matches")
     public ArrayList<ArrayList<String>> getallMatches(){
+       
        ArrayList<Match> x = (ArrayList<Match>) this.matchRepository.findAll();
        ArrayList<ArrayList<String>> y = new ArrayList<>();
 
+      
        int i=0;
        for(Match element : x){
         if(i>4){break;}
@@ -56,7 +58,7 @@ public class TeamController {
         return y;
     }
  
-
+  
     @GetMapping("/home/{TeamName}")
     public Team getTeam(@PathVariable String TeamName){
 

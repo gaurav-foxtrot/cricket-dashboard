@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 //import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cricketdashboard.dashboard.model.Match;
 import com.cricketdashboard.dashboard.model.Team;
 import com.cricketdashboard.dashboard.repository.MatchRepository;
 import com.cricketdashboard.dashboard.repository.TeamRepository;
@@ -30,7 +31,6 @@ public class TeamController {
     @GetMapping("/home/teams")
     public ArrayList<String> getallTeams(){
         ArrayList<Team> t = (ArrayList<Team>) this.teamRepository.findAll();
-        System.out.println("------------------------------------------------------------------------------");
         ArrayList<String> r = new ArrayList<>();
         for( Team element : t ){
             r.add(element.getTeamName());
@@ -38,6 +38,22 @@ public class TeamController {
         }
         return r;
         
+    }
+    @GetMapping("/home/matches")
+    public ArrayList<ArrayList<String>> getallMatches(){
+       ArrayList<Match> x = (ArrayList<Match>) this.matchRepository.findAll();
+       ArrayList<ArrayList<String>> y = new ArrayList<>();
+
+       int i=0;
+       for(Match element : x){
+        if(i>4){break;}
+        ArrayList<String> p = new ArrayList<>();
+        p.add(element.getTeam1());
+        p.add(element.getTeam2());
+        y.add(p);
+        ++i;
+       }
+        return y;
     }
  
 

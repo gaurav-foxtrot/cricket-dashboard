@@ -53,8 +53,7 @@ public Team(String teamName, long totalMatches) {
 }
 @Override
 public String toString() {
-    return "Team [id=" + id + ", teamName=" + teamName
-    // + ", totalMatches=" + totalMatches + ", totalWins=" + totalWins
+    return "Team [id=" + id + ", teamName=" + teamName + ", totalMatches=" + totalMatches + ", totalWins=" + totalWins
             + "]";
 }
 public Team() {

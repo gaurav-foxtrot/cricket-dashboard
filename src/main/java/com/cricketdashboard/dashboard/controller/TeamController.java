@@ -41,6 +41,7 @@ public class TeamController {
         return r;
         
     }
+
     @GetMapping("/home/matches")
     public ArrayList<ArrayList<String>> getallMatches(){
        
@@ -55,6 +56,7 @@ public class TeamController {
         p.add(element.getTeam1());
         p.add(element.getTeam2());
         y.add(p);
+        
         ++i;
        }
         return y;

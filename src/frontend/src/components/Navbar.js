@@ -14,8 +14,12 @@ export const Navbar = () => {
 
     
   );
+};
 
-   
-}
+const NavbarIcon = ({icon}) =>(
+<div>
+    {icon}
+</div>   
+);
 
 export default Navbar

@@ -6,6 +6,10 @@ function App() {
   return (
     <div className="App">
       <HomePage />
+      <Charts />
+      <About />
+      <Records />      
+
     </div>
   );
 }

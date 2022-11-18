@@ -13,12 +13,12 @@ export const  HomePage = () => {
 
   return (
     <div className='HomePage'>
-      
-      <div className={"bg-[#0e0e0e] min-h-screen "}></div>
+    
+
         <Navbar />  
         <RecentMatches />
-       <TeamList />
-
+        <TeamList />
+   
     </div>
   );
 }

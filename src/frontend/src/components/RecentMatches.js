@@ -13,6 +13,14 @@ export const RecentMatches = () => {
     for(const a in data){
       console.log(data[a]);
     }
+
+    // setMatches([]);
+    // for(const key in data){
+    //   if(data.hasOwnProperty(key)){
+    //     setMatches((match) => [...match,data[key]]);
+    //   }
+    // }
+    // console.log(match);
   };
 
   useEffect(() => {  
@@ -25,24 +33,15 @@ export const RecentMatches = () => {
 
       <div className="card w-96 bg-base-100 bg-slate-800  shadow-xl">
   <div className="card-body text-white" >
- 
+  {match.map((data) =>{
+    return(<h1>{data[0]} vs {data[1]}</h1>)})}
     <div className="card-actions justify-end">
 
-    {
-        
-        match.map((data) =>{
-          return(<h1>{data[0]} vs {data[1]}</h1>)
-        }
-      )
-      }
+ 
     </div>
   </div>
 </div>
-     
-   
-      
-   
-    </div>
+</div>
   );
 }
 

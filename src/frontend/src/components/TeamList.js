@@ -15,14 +15,24 @@ export const TeamList = () => {
       };
       fetchTeams();
     
-    },[]
+    }
 );
 
   return (
     <div className = 'TeamList'>
         <h1>Team List</h1>
-        <p>{team}</p>
+        <p>{team?.[0]}</p>
+        <p>{team?.[1]}</p>
+        <p>{team?.[2]}</p>
+        <p>{team?.[3]}</p>
+        <p>{team?.[4]}</p>
+        <p>{team?.[5]}</p>
+        <p>{team?.[6]}</p>
+        <p>{team?.[7]}</p>
+        <p>{team?.[8]}</p>
         
+
+
     </div>
   )
 }

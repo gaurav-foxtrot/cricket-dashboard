@@ -1,8 +1,11 @@
 import React from 'react'
 
-function MatchSmall() {
+function MatchSmall({match}) {
   return (
-    <div>MatchSmall</div>
+    <div className='MatchSmall'>
+     <h1> MatchSmall</h1>
+      <p>{match.team1} vs {match.team2}</p>
+      </div>
   )
 }
 

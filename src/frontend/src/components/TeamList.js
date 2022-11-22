@@ -11,25 +11,34 @@ export const TeamList = () => {
         const response = await fetch('http://localhost:8080/home/teams/');
         const data = await response.json();
         setTeams(data);
-        //console.log(data);
+        console.log(data);
       };
       fetchTeams();
     
-    }
+    },[]
 );
 
   return (
-    <div className = 'TeamList'>
+    <div className = 'TeamList  '>
         <h1>Team List</h1>
-        <p>{team?.[0]}</p>
-        <p>{team?.[1]}</p>
-        <p>{team?.[2]}</p>
-        <p>{team?.[3]}</p>
-        <p>{team?.[4]}</p>
-        <p>{team?.[5]}</p>
-        <p>{team?.[6]}</p>
-        <p>{team?.[7]}</p>
-        <p>{team?.[8]}</p>
+        <i>{team?.[0]}</i><br/>
+        <i>{team?.[1]}</i><br/>
+        <i>{team?.[2]}</i><br/>
+        <i>{team?.[3]}</i><br/>
+        <i>{team?.[4]}</i><br/>
+        <i>{team?.[5]}</i><br/>
+        <i>{team?.[6]}</i><br/>
+        <i>{team?.[7]}</i><br/>
+        <i>{team?.[8]}</i><br/>
+        <i>{team?.[9]}</i><br/>
+        <i>{team?.[10]}</i><br/>
+        <i>{team?.[11]}</i><br/>
+        <i>{team?.[12]}</i><br/>
+        <i>{team?.[13]}</i><br/>
+        <i>{team?.[14]}</i><br/>
+        <i>{team?.[15]}</i><br/>
+        <i>{team?.[16]}</i><br/>
+        
         
 
 

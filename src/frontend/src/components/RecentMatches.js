@@ -5,43 +5,29 @@ export const RecentMatches = () => {
 
   const[match , setMatches] = useState([]);
 
-  const fetchMatches = async() =>{
-    const response = await fetch('http://localhost:8080/home/matches/');
-    const data = await response.json();
-    setMatches(data);
-    //console.log(data);
-    for(const a in data){
-      console.log(data[a]);
-    }
-
-    // setMatches([]);
-    // for(const key in data){
-    //   if(data.hasOwnProperty(key)){
-    //     setMatches((match) => [...match,data[key]]);
-    //   }
-    // }
-    // console.log(match);
-  };
-
-  useEffect(() => {  
-      fetchMatches();
-    },[]);
+  useEffect(
+    () => {
+    const fetchMatches = async() =>{
+      const response = await fetch('http://localhost:8080/home/matches/');
+      const data = await response.json();
+      setMatches(data);
+      console.log(data); 
+    };
+    fetchMatches()
+   
+  },[]
+);
    
   return (
-    <div className='RecentMatches'>
-       <h1>Recent Matches</h1>
-
-      <div className="card w-96 bg-base-100 bg-slate-800  shadow-xl">
-  <div className="card-body text-white" >
-  {match.map((data) =>{
-    return(<h1>{data[0]} vs {data[1]}</h1>)})}
-    <div className="card-actions justify-end">
-
- 
-    </div>
-  </div>
+    <div className='recentmatches'>
+       <h1 className='py-4  '>Recent Matches</h1>
+       <h3 className='team py-4'>{match?.[0]?.[0]} vs {match?.[0]?.[1]}</h3>
+       <h3 className='team py-4'>{match?.[1]?.[0]} vs {match?.[1]?.[1]}</h3>
+       <h3 className='team py-4'>{match?.[2]?.[0]} vs {match?.[2]?.[1]}</h3>
+       <h3 className='team py-4'>{match?.[3]?.[0]} vs {match?.[3]?.[1]}</h3>
+       <h3 className='team py-4'>{match?.[4]?.[0]} vs {match?.[4]?.[1]}</h3>
 </div>
-</div>
+
   );
 }
 

@@ -14,15 +14,21 @@ body {
   background-color: lightgrey;
 }
 
-.RecentMatches{
-  padding: 60px;
+.recentmatches{
+  padding: 80px;
+  float: left;
+  
+ 
   
  
   
 }
 
 .TeamList{
-  padding: 60px;
+  padding: 80px;
+  
+  float: right;
+ 
 }
 
 @layer components{

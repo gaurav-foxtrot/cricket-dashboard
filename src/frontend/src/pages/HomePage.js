@@ -1,8 +1,10 @@
-import {React, useEffect, useState} from 'react'
+import {Fragment, React, useEffect, useState} from 'react'
+import MatchDetail from '../components/MatchDetail';
 import Navbar from '../components/Navbar';
 
 import RecentMatches from '../components/RecentMatches';
 import TeamList from '../components/TeamList';
+
 
 export const  HomePage = () => {
 
@@ -12,12 +14,14 @@ export const  HomePage = () => {
  
 
   return (
-    <div className='HomePage'>
+    <div className='HomePage '>
     
-
         <Navbar />  
-        <RecentMatches />
-        <TeamList />
+      
+        <div><RecentMatches /></div>
+        <div><TeamList /></div>  
+      
+       
    
     </div>
   );

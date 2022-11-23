@@ -4,14 +4,16 @@ import {React, useEffect, useState} from 'react'
 export const RecentMatches = () => {
 
   const[match , setMatches] = useState([]);
+ 
 
+ 
   useEffect(
     () => {
     const fetchMatches = async() =>{
       const response = await fetch('http://localhost:8080/home/matches/');
       const data = await response.json();
       setMatches(data);
-      console.log(data); 
+      // console.log(data); 
     };
     fetchMatches()
    

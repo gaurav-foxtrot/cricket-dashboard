@@ -1,12 +1,10 @@
 import React from 'react'
 
-function MatchSmall({match}) {
+export default function MatchSmall({match}) {
   return (
-    <div className='MatchSmall'>
-     <h1> MatchSmall</h1>
-      <p>{match.team1} vs {match.team2}</p>
-      </div>
+    <div>
+        <h4>{match.team1} vs {match.team2}</h4>
+    </div>
   )
 }
 
-export default MatchSmall

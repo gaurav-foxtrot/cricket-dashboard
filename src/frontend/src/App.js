@@ -3,6 +3,7 @@ import './App.css';
 import AboutPage from './pages/AboutPage';
 import ChartsPage from './pages/ChartsPage';
 import HomePage from './pages/HomePage';
+import MatchPage from './pages/MatchPage';
 import RecordsPage from './pages/RecordsPage';
 
 
@@ -10,7 +11,8 @@ import RecordsPage from './pages/RecordsPage';
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      {/* <HomePage /> */}
+      <MatchPage />
       <ChartsPage />
       <AboutPage />
       <RecordsPage />

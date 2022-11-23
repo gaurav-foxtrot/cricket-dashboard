@@ -1,9 +1,12 @@
-import {Fragment, React, useEffect, useState} from 'react'
-import MatchDetail from '../components/MatchDetail';
+import { React} from 'react';
+import MatchSmall from '../components/MatchSmall';
+//import { Routes, Route, useNavigate} from 'react-router-dom';
+
 import Navbar from '../components/Navbar';
 
 import RecentMatches from '../components/RecentMatches';
 import TeamList from '../components/TeamList';
+import MatchPage from './MatchPage';
 
 
 export const  HomePage = () => {
@@ -19,7 +22,10 @@ export const  HomePage = () => {
         <Navbar />  
       
         <div><RecentMatches /></div>
-        <div><TeamList /></div>  
+        <div><TeamList /></div> 
+        <div><MatchPage /></div>
+
+      
       
        
    

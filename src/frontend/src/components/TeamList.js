@@ -11,7 +11,7 @@ export const TeamList = () => {
         const response = await fetch('http://localhost:8080/home/teams/');
         const data = await response.json();
         setTeams(data);
-        console.log(data);
+        // console.log(data);
       };
       fetchTeams();
     

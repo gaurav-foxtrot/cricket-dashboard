@@ -1,4 +1,4 @@
-
+import {Route,Routes} from 'react-router-dom';
 import './App.css';
 import AboutPage from './pages/AboutPage';
 import ChartsPage from './pages/ChartsPage';
@@ -11,11 +11,19 @@ import RecordsPage from './pages/RecordsPage';
 function App() {
   return (
     <div className="App">
-      {/* <HomePage /> */}
-      <MatchPage />
+    
+        <Routes>
+        <Route path="/home" element ={<HomePage />}> </Route>
+      <Route path="/home/:teamName" element={<MatchPage />}></Route>
+      </Routes> 
+      
       <ChartsPage />
       <AboutPage />
       <RecordsPage />
+    
+      
+      
+
 
     </div>
   );

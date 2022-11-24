@@ -1,9 +1,8 @@
 import {React, useEffect, useState} from 'react'
-
+import {Link} from 'react-router-dom';
 export const TeamList = () => {
 
   const[team , setTeams] = useState();
-
 
   useEffect(
     () => {
@@ -20,27 +19,32 @@ export const TeamList = () => {
 
   return (
     <div className = 'TeamList  '>
-        <h1>Team List</h1>
-        <i>{team?.[0]}</i><br/>
-        <i>{team?.[1]}</i><br/>
-        <i>{team?.[2]}</i><br/>
-        <i>{team?.[3]}</i><br/>
-        <i>{team?.[4]}</i><br/>
-        <i>{team?.[5]}</i><br/>
-        <i>{team?.[6]}</i><br/>
-        <i>{team?.[7]}</i><br/>
-        <i>{team?.[8]}</i><br/>
-        <i>{team?.[9]}</i><br/>
-        <i>{team?.[10]}</i><br/>
-        <i>{team?.[11]}</i><br/>
-        <i>{team?.[12]}</i><br/>
-        <i>{team?.[13]}</i><br/>
-        <i>{team?.[14]}</i><br/>
-        <i>{team?.[15]}</i><br/>
-        <i>{team?.[16]}</i><br/>
+        <h1>Team List</h1><br/>
+        <div>
+        
+       
+        
+        <h3><Link to ='/home/Mumbai Indians' >{team?.[0]}</Link></h3><br/>
+        <h3><Link to ='/home/Pune Warriors' >{team?.[1]}</Link></h3><br/>
+        <h3><Link to ='/home/Sunrisers Hyderabad' >{team?.[2]}</Link></h3><br/>
+        <h3><Link to ='/home/Gujarat Titans' >{team?.[3]}</Link></h3><br/>
+        <h3><Link to ='/home/Lucknow Super Giants' >{team?.[4]}</Link></h3><br/>
+        <h3><Link to ='/home/Rajasthan Royals' >{team?.[5]}</Link></h3><br/>
+        <h3><Link to ='/home/Kolkata Knight Riders' >{team?.[6]}</Link></h3><br/>
+        <h3><Link to ='/home/Royal Challengers Bangalore' >{team?.[7]}</Link></h3><br/>
+        <h3><Link to ='/home/Gujarat Lions' >{team?.[8]}</Link></h3><br/>
+        <h3><Link to ='/home/Punjab Kings' >{team?.[9]}</Link></h3><br/>
+        <h3><Link to ='/home/Rising Pune Supergiant' >{team?.[10]}</Link></h3><br/>
+        <h3><Link to ='/home/Kochi Tuskers Kerala' >{team?.[11]}</Link></h3><br/>
+        <h3><Link to ='/home/Delhi Capitals' >{team?.[12]}</Link></h3><br/>
+        <h3><Link to ='/home/Kings XI Punjab' >{team?.[13]}</Link></h3><br/>
+        <h3><Link to ='/home/Deccan Chargers' >{team?.[14]}</Link></h3><br/>
+        <h3><Link to ='/home/Rising Pune Supergiants' >{team?.[15]}</Link></h3><br/>
+        <h3><Link to ='/home/Chennai Super Kings' >{team?.[16]}</Link></h3><br/>
+        <h3><Link to ='/home/Pune Warriors' >{team?.[17]}</Link></h3><br/>
         
         
-
+    </div>
 
     </div>
   )

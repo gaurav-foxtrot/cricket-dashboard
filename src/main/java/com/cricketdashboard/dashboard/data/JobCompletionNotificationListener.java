@@ -38,9 +38,11 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
       
       Map<String, Team> teamData = new HashMap<>();
 
-      // em.createQuery("select teamName from team t ", Object[].class)
+      // em.createQuery("select m.playerOfMatch from Match m ", Object[].class)
       // .getResultList()
-      // .stream();
+      // .stream()
+      // .forEach(match -> m = );
+      
       
       
       em.createQuery("select m.team1, count(*) from Match m group by m.team1", Object[].class)

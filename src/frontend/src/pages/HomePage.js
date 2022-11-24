@@ -11,10 +11,6 @@ import MatchPage from './MatchPage';
 
 export const  HomePage = () => {
 
-   
-
-
- 
 
   return (
     <div className='HomePage '>
@@ -23,7 +19,7 @@ export const  HomePage = () => {
       
         <div><RecentMatches /></div>
         <div><TeamList /></div> 
-        <div><MatchPage /></div>
+      
 
       
       

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 export const TeamList = () => {
 
   const[team , setTeams] = useState();
+  
 
   useEffect(
     () => {

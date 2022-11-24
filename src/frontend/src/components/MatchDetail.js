@@ -1,13 +1,14 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 export default function MatchDetail({teamName,match}) {
 if(!match) return null;
 const oppositeTeam = match.team1 === teamName ? match.team2 : match.team1;
-  return (
+const oppositeTeamRoute =  `/home/${oppositeTeam}`; 
+return (
   
     <div className='MatchDetail ' >
 
-      <h1>vs {oppositeTeam}</h1>
+      <Link to = {oppositeTeamRoute}><h1>vs {oppositeTeam}</h1></Link>
       <h2>{match.date}</h2>
       <h2>held at {match.venue} in {match.city}</h2>
       <h2>Season - {match.season}</h2>

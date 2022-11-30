@@ -28,15 +28,19 @@ function MatchPage() {
       return <h1 className="text-center">Team Not Found! Try another team</h1>
     }
   return (
+    <div>
     <div className='MatchPage'>
         <Navbar />
-         <h1>{team.teamName} Match Card</h1><br/>
+         <h1 className='Heading  text-4xl'>{team.teamName} Match Card</h1><br/>
          
-         <h2>Match Details</h2><br/>
+         <h2 className='matchdetails text- text-xl'>Match Details</h2><br/>
         <MatchDetail teamName={team.teamName} match = {team.matches[0]} /><br></br>
+      </div>
+    <div className='smallcard  '>
         {team.matches.slice(1).map(match => <MatchSmall teamName={team.teamName} match={match}/>)}
+    
     </div>
-     
+    </div>
     
   )
 }

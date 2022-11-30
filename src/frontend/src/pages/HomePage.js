@@ -13,7 +13,11 @@ export const  HomePage = () => {
 
 
   return (
+    
     <div className='HomePage '>
+    <div className='topbar fixed top-0 h-10 w-screen bg-gray-900 text-white text-2xl'>
+    <h1>HomePage</h1>
+    </div>  
     
         <Navbar />  
       
@@ -23,7 +27,7 @@ export const  HomePage = () => {
 
       
       
-       
+        
    
     </div>
   );

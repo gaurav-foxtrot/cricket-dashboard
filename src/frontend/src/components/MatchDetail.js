@@ -6,7 +6,7 @@ const oppositeTeam = match.team1 === teamName ? match.team2 : match.team1;
 const oppositeTeamRoute =  `/home/${oppositeTeam}`; 
 return (
   
-    <div className='MatchDetail ' >
+    <div className='MatchDetail bg-slate-900 text-white rounded-xl p-3 ' >
 
       <Link to = {oppositeTeamRoute}><h1>vs {oppositeTeam}</h1></Link>
       <h2>{match.date}</h2>

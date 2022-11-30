@@ -1,18 +1,16 @@
 import React from 'react'
 import { AiFillHome, AiFillCalendar,AiFillPieChart, AiOutlineComment } from "react-icons/ai";
+import {Link} from 'react-router-dom'
 
 export const Navbar = () => {
   return (
     
-    <div className='fixed top-0 left-0 h-screen w-16  flex flex-col bg-gray-900 text-white shadow rounded-tr-2xl rounded-br-2xl'>
-        {/* <i>Home</i>
-        <i>Records</i>
-        <i>Charts</i>
-        <i>About</i> */}
-        <NavbarIcon icon ={<AiFillHome size = "28"  /> }  />
-        <NavbarIcon icon = {<AiFillCalendar size = "28" />} />
-        <NavbarIcon icon = {<AiFillPieChart size = "28" />} />
-        <NavbarIcon icon = {<AiOutlineComment size = "28"/>} />
+    <div className='fixed top-0 left-0 h-screen w-20  flex flex-col bg-gray-900 text-white shadow rounded-tr-2xl rounded-br-2xl'>
+        <div><Link to = '/home' ><NavbarIcon  icon ={<AiFillHome size = "28"  /> }  /><h1 className='text-center'>Home</h1></Link>  
+         </div>
+        <NavbarIcon icon = {<AiFillCalendar size = "28" />} /><h1 className='text-center'>Records</h1>
+        <NavbarIcon icon = {<AiFillPieChart size = "28" />} /><h1 className='text-center'>Charts</h1>
+        <NavbarIcon icon = {<AiOutlineComment size = "28"/>} /><h1 className='text-center'>About</h1>
  
     </div> 
 
@@ -20,13 +18,9 @@ export const Navbar = () => {
   );
 };
 
-const NavbarIcon = ({icon, text = 'tooltip'}) =>(
+const NavbarIcon = ({icon}) =>(
 <div className = 'navbar-icon'>
     {icon}
-
-    <span className="navbar-tooltip group-hover:scale-100">
-    {text}
-    </span>
 </div>   
 );
 

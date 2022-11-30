@@ -14,23 +14,55 @@ body {
   background-color: lightgrey;
 }
 
+.topbar{
+  border-radius: 30px 30px;
+  text-align:center;
+  float:left;
+  padding: left 20px;;
+  font-weight:900;
+  }
+
 .MatchDetail{
   font-weight: bold;
+  float : center;
+
+}
+
+.MatchSmall{
+  margin-bottom: 2%;
+  display: grid;
+ grid-template-columns: 1fr ;
+
 }
 
 .recentmatches{
-  padding: 80px;
+  margin-top: 2%;
+  display: grid;
+  
   float: left;
-  
- 
-  
- 
+  margin-left: 5%;
   
 }
+.box{
+  color:white;
+  background-color: #1a202c;
+  border-radius: 10px;
+  padding: 10px;
+   
+}
 
+.teamheading{
+  margin-top: 3%;
+}
+.teamname{
+  padding:60px;
+  float:right;
+  
+}
 .TeamList{
- 
-  padding:80px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  
   float: right;
  
 }
@@ -38,7 +70,19 @@ body {
 .MatchPage{
   padding: 80px;
   float: left;
-}
+ 
+ }
+
+ .smallcard{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-left: 60px;
+  float: left;
+
+ }
+
+ 
 
 @layer components{
   .navbar-icon{
@@ -47,19 +91,11 @@ body {
      bg-slate-600 text-slate-300  hover:bg-slate-800
      hover:text-slate-400
      rounded-3xl hover:rounded-xl 
-     transition-all duration-300 ease-linear ;
+     transition-all duration-300  cursor-pointer ease-linear ;
   }
-
-  .navbar-tooltip{
-    @apply absolute w-auto p-2 m-2 min-w-max left-14
-    rounded-md shadow-md
-    text-slate-900 bg-slate-600 
-    text-xs font-bold
-    transition-all duration-100 scale-0 origin-left;  
-  }
-
 
 }
+
 
 
 

@@ -24,10 +24,8 @@ body {
 
 .MatchDetail{
   font-weight: bold;
-  float : center;
-
+  
 }
-
 .MatchSmall{
   margin-bottom: 2%;
   display: grid;
@@ -35,25 +33,38 @@ body {
 
 }
 
+.scorecardbutton{
+  float:right;
+}
+
 .recentmatches{
   margin-top: 2%;
   display: grid;
-  
+  padding-top: 30px;
+  padding-left: 60px;
   float: left;
   margin-left: 5%;
+  
+}
+
+.box1{
+
+  color:white;
+  background-color: #1a202c;
+  border-radius: 10px;
+  padding: 20px;
+  width: 150%;
   
 }
 .box{
   color:white;
   background-color: #1a202c;
   border-radius: 10px;
-  padding: 10px;
-   
+  padding: 20px;
+  
 }
 
-.teamheading{
-  margin-top: 3%;
-}
+
 .teamname{
   padding:60px;
   float:right;
@@ -61,28 +72,48 @@ body {
 }
 .TeamList{
   margin-top: 2%;
-  margin-bottom: 2%;
-  
+  margin-bottom: 1%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
   float: right;
  
 }
 
 .MatchPage{
-  padding: 80px;
+  padding: 5px;
+  padding-left: 70px;
+  padding-top: 40px;
   float: left;
- 
+  width: 915px;
  }
 
  .smallcard{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  padding-left: 60px;
-  float: left;
+  width: 850px;
+  
 
  }
 
- 
+ .won-card{
+  border-radius: 12px;
+  background-color: rgb(0 128 101);
+  color: white;
+  padding:5px;
+  padding-left: 10px;
+  padding-bottom: 50px;
+}
+
+ .lost-card{
+  border-radius: 12px;
+  background-color: rgb(255 0 101);
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-bottom: 50px;  
+}
 
 @layer components{
   .navbar-icon{

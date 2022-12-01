@@ -20,8 +20,8 @@ export const TeamList = () => {
 
   return (
   <div >
-       <div  className = 'TeamList bg-slate-400 rounded-xl p-10 px-10 mx-4 top-4  '>
-       <h1 className='teamheading font-bold  text-2xl'>Team List</h1><br/>
+       <div  className = 'TeamList bg-slate-400 rounded-xl p-2 px-5 '>
+       <h1 className='teamheading font-bold  text-2xl'>Team List</h1><br></br><br></br>
 
        <div>
           <h3 className='box'><Link to ='/home/Mumbai Indians' >{team?.[0]}</Link></h3><br/>
@@ -31,18 +31,20 @@ export const TeamList = () => {
           <h3 className='box'><Link to ='/home/Lucknow Super Giants' >{team?.[4]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Rajasthan Royals' >{team?.[5]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Kolkata Knight Riders' >{team?.[6]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/home/Royal Challengers Bangalore' >{team?.[7]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/home/Punjab Kings' >{team?.[9]}</Link></h3><br/>
+          <h3 className='box'><Link to ='/home/Gujarat Lions' >{team?.[8]}</Link></h3><br/>
+          </div>
+        <div>
+        <h3 className='box'><Link to ='/home/Punjab Kings' >{team?.[9]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Rising Pune Supergiant' >{team?.[10]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Kochi Tuskers Kerala' >{team?.[11]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Delhi Capitals' >{team?.[12]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Kings XI Punjab' >{team?.[13]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Deccan Chargers' >{team?.[14]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/home/Rising Pune Supergiants' >{team?.[15]}</Link></h3><br/>
+          <h3 className='box'><Link to ='/home/Royal Challengers Bangalore' >{team?.[7]}</Link></h3><br/>
           <h3 className='box'><Link to ='/home/Chennai Super Kings' >{team?.[16]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/home/Gujarat Lions' >{team?.[8]}</Link></h3><br/>
-      </div>
-
+          
+      
+        </div>
         </div> 
       </div>
     

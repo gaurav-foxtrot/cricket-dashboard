@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import MatchDetail from '../components/MatchDetail';
 import MatchSmall from '../components/MatchSmall';
 import Navbar from '../components/Navbar';
+import TeamList from '../components/TeamList';
 
 
 function MatchPage() {
@@ -29,17 +30,19 @@ function MatchPage() {
     }
   return (
     <div>
-    <div className='MatchPage'>
+    <div className='MatchPage '>
         <Navbar />
-         <h1 className='Heading  text-4xl'>{team.teamName} Match Card</h1><br/>
+         <h1 className='Heading  text-4xl'>{team.teamName} </h1><br/>
          
          <h2 className='matchdetails text- text-xl'>Match Details</h2><br/>
         <MatchDetail teamName={team.teamName} match = {team.matches[0]} /><br></br>
-      </div>
-    <div className='smallcard  '>
+
+        <div className='smallcard  '>
         {team.matches.slice(1).map(match => <MatchSmall teamName={team.teamName} match={match}/>)}
     
     </div>
+      </div>    
+      <TeamList />
     </div>
     
   )

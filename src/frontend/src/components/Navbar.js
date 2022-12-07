@@ -9,7 +9,9 @@ export const Navbar = () => {
         <div><Link to = '/home' ><NavbarIcon  icon ={<AiFillHome size = "28"  /> }  /><h1 className='text-center'>Home</h1></Link>  
          </div>
         <NavbarIcon icon = {<AiFillCalendar size = "28" />} /><h1 className='text-center'>Records</h1>
-        <NavbarIcon icon = {<AiFillPieChart size = "28" />} /><h1 className='text-center'>Charts</h1>
+        <div><Link to = '/charts/Mumbai Indians'><NavbarIcon icon = {<AiFillPieChart size = "28" />} /><h1 className='text-center'>Charts</h1></Link>
+        </div>
+        
         <NavbarIcon icon = {<AiOutlineComment size = "28"/>} /><h1 className='text-center'>About</h1>
  
     </div> 

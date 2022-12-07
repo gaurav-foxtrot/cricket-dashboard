@@ -14,14 +14,13 @@ function App() {
     
         <Routes>
         <Route path="/home" element ={<HomePage />}> </Route>
-      <Route path="/home/:teamName" element={<MatchPage />}></Route>
-      </Routes> 
-      
-      <ChartsPage />
-      <AboutPage />
+      <Route path="/home/:teamName" element={<MatchPage />}></Route> 
+      <Route path="/charts/:teamName" element = {<ChartsPage />}> </Route>
+      </Routes>
+     <AboutPage />
       <RecordsPage />
-    
       
+     
       
 
 

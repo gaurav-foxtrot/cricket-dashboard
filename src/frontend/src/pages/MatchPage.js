@@ -1,4 +1,5 @@
 import {React, useState, useEffect} from 'react';
+import { PieChart } from 'react-minimal-pie-chart';
 import { useParams } from 'react-router-dom';
 import MatchDetail from '../components/MatchDetail';
 import MatchSmall from '../components/MatchSmall';
@@ -41,6 +42,7 @@ function MatchPage() {
         {team.matches.slice(1).map(match => <MatchSmall teamName={team.teamName} match={match}/>)}
     
     </div>
+  
       </div>    
       <TeamList />
     </div>

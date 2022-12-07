@@ -4,8 +4,7 @@ public class TeamInput {
 
     private String id;
     private String teamName;
-    private String teamPlayers;
-    
+   
     public String getId() {
         return id;
     }
@@ -18,12 +17,7 @@ public class TeamInput {
     public void setTeamName(String teamName) {
         this.teamName = teamName;
     }
-    public String getTeamPlayers() {
-        return teamPlayers;
-    }
-    public void setTeamPlayers(String teamPlayers) {
-        this.teamPlayers = teamPlayers;
-    }
+   
     
     
 }

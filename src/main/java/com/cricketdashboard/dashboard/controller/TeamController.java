@@ -55,6 +55,9 @@ public class TeamController {
         ArrayList<String> p = new ArrayList<>();
         p.add(element.getTeam1());
         p.add(element.getTeam2());
+        p.add(element.getWinningTeam());
+        p.add(element.getWonBy());
+        p.add(element.getMargin());
         y.add(p);
         
         ++i;

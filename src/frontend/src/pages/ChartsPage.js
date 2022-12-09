@@ -45,14 +45,13 @@ function ChartsPage() {
           <h3 className='box'><Link to ='/charts/Mumbai Indians' >{team?.[0]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Pune Warriors' >{team?.[1]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Sunrisers Hyderabad' >{team?.[2]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/charts/Gujarat Titans' >{team?.[3]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Lucknow Super Giants' >{team?.[4]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/charts/Rajasthan Royals' >{team?.[5]}</Link></h3><br/>
+          <h3 className='box'><Link to ='/charts/Punjab Kings' >{team?.[9]}</Link></h3><br/>
+          
           <h3 className='box'><Link to ='/charts/Kolkata Knight Riders' >{team?.[6]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Gujarat Lions' >{team?.[8]}</Link></h3><br/>
           </div>
         <div>
-        <h3 className='box'><Link to ='/charts/Punjab Kings' >{team?.[9]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Rising Pune Supergiant' >{team?.[10]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Kochi Tuskers Kerala' >{team?.[11]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Delhi Capitals' >{team?.[12]}</Link></h3><br/>

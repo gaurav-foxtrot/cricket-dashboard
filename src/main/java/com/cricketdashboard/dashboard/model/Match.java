@@ -12,7 +12,7 @@ public class Match {
     private long id;
     private String city;
     private LocalDate date;
-    private String season;
+    private int season;
     private String matchNumber;
     private String team1;
     private String team2;
@@ -139,10 +139,10 @@ public class Match {
     public void setUmpire2(String umpire2) {
         this.umpire2 = umpire2;
     }
-    public String getSeason() {
+    public int getSeason() {
         return season;
     }
-    public void setSeason(String season) {
+    public void setSeason(int season) {
         this.season = season;
     }
     public String getSuperOver() {

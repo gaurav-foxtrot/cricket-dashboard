@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import ScoreCard from './ScoreCard';
+import SeasonSelector from './SeasonSelector';
 
 
 export default function MatchDetail({teamName,match}) {
@@ -15,7 +15,7 @@ return (
     
     <div className={isMatchWon ? 'won-card' : 'lost-card' }   >
 
-      <Link to = {oppositeTeamRoute}><h3>vs {oppositeTeam}</h3></Link>
+      <Link to = {oppositeTeamRoute}><h3 className=' text-2xl'>vs {oppositeTeam}</h3><br></br></Link>
       <h3>Date - {match.date}</h3>
       <h3>held at {match.venue} in {match.city}</h3>
       <h3>Season - {match.season}</h3>
@@ -23,8 +23,10 @@ return (
       <h3>{match.winningTeam} won by {match.margin} {match.wonBy}</h3>
       <h3>Man of the Match - {match.playerOfMatch} </h3>
       <h3>Umpires for the match - {match.umpire1} and {match.umpire2}</h3>
+     
       <button class="bg-white hover:bg-black hover:text-white text-black font-bold py-2 px-4 rounded-full float-right ">Scorecard </button>
-
+      
+     
       </div>
 
   

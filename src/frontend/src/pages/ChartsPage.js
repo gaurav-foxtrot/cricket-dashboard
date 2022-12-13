@@ -2,9 +2,10 @@ import {React, useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 import Chart1 from '../components/Chart1';
-import TeamList from '../components/TeamList';
+
 import Navbar from '../components/Navbar';
 import Chart2 from '../components/Chart2';
+import SeasonSelector from '../components/SeasonSelector';
 
 
 
@@ -30,9 +31,13 @@ function ChartsPage() {
     <h1 className='topbar fixed top-0 h-10 w-screen bg-gray-900 text-white text-2xl'>Charts pages</h1>
     
      <Navbar />
+     
      <div className='content-center'>
       <div className='chart1s'>
      <Chart1 />
+      <div>
+     <SeasonSelector />
+     </div>
      <br></br>
       <Chart2 />  
      </div>
@@ -59,10 +64,10 @@ function ChartsPage() {
           <h3 className='box'><Link to ='/charts/Deccan Chargers' >{team?.[14]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Royal Challengers Bangalore' >{team?.[7]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Chennai Super Kings' >{team?.[16]}</Link></h3><br/>
-          
+         
       
         </div>
-        </div> 
+        </div>
       </div>
     
      </div>

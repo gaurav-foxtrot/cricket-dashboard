@@ -42,6 +42,9 @@ public class TeamController {
         
     }
 
+
+    
+
     @GetMapping("/home/matches")
     public ArrayList<ArrayList<String>> getallMatches(){
        
@@ -74,7 +77,10 @@ public class TeamController {
        team.setMatches(matchRepository.getByTeam1OrTeam2OrderByDateDesc(TeamName, TeamName, pageable)); 
        return team;
     }
-  
+
+    
+    //arrays of season[object for totalWins, total Matches]
+    
 
   
 }

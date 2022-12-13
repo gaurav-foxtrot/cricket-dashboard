@@ -3,7 +3,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 import { useParams } from 'react-router-dom';
 
 
-
+  
 
 
 function Chart1() {

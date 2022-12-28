@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name="Match")
 public class Match {
 
     @Id

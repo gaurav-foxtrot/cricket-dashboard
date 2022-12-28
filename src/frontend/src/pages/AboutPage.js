@@ -6,6 +6,8 @@ export const AboutPage = () => {
   return (
     <div>
       <Navbar />
+      <h1 className='text-center font-bold '>AboutPage</h1>
+      <p></p>
      
     </div>
   )

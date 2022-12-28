@@ -1,14 +1,18 @@
 package com.cricketdashboard.dashboard.controller;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+
+import java.util.List;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-//import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cricketdashboard.dashboard.model.Match;
@@ -77,10 +81,42 @@ public class TeamController {
        team.setMatches(matchRepository.getByTeam1OrTeam2OrderByDateDesc(TeamName, TeamName, pageable)); 
        return team;
     }
+//for total wins , total matches each season
+   @GetMapping("/team/{teamName}/matches")
+   public List<Team> getMatchesForTeam(@PathVariable String teamName){
+    // int year;
+    ArrayList<Team> teamAllSeason = new ArrayList<>();
+    for (int year=2007; year<=2022; year++) {
+    LocalDate startDate = LocalDate.of(year, 1, 1);
+    LocalDate endDate = LocalDate.of(year + 1, 1, 1 );
+    Team team = new Team();
+    team.setMatches(matchRepository.getMatchesByTeamBetweenDates(
+        teamName, startDate,endDate
+    ));
+    System.out.println("total matches print" + matchRepository.getTotalMatchesOfSeason(teamName, startDate, endDate));
+    System.out.println("total wins " + matchRepository.getTotalWinsOfSeason(teamName, startDate, endDate));
+    team.setTeamName(teamName);
+    team.setTotalMatches(matchRepository.getTotalMatchesOfSeason(teamName, startDate, endDate));
+    team.setTotalWins(matchRepository.getTotalWinsOfSeason(teamName, startDate, endDate));
+    team.setSeason(year);
+    teamAllSeason.add(team);
+    }
+    
+    return teamAllSeason;
+    // return this.matchRepository.getMatchesByTeamBetweenDates(
+    //     teamName, startDate,endDate
+    // );
+
+   }
+
+ }
+
+
+
 
     
     //arrays of season[object for totalWins, total Matches]
     
 
   
-}
+

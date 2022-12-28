@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import ScoreCard from './ScoreCard';
 import SeasonSelector from './SeasonSelector';
 
 
@@ -23,8 +24,7 @@ return (
       <h3>{match.winningTeam} won by {match.margin} {match.wonBy}</h3>
       <h3>Man of the Match - {match.playerOfMatch} </h3>
       <h3>Umpires for the match - {match.umpire1} and {match.umpire2}</h3>
-     
-      <button class="bg-white hover:bg-black hover:text-white text-black font-bold py-2 px-4 rounded-full float-right ">Scorecard </button>
+      <ScoreCard />
       
      
       </div>

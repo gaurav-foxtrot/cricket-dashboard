@@ -145,7 +145,7 @@ body {
   background-color: rgb(255 0 101);
   color: white;
   padding: 20px;
-  
+  align-items: center;
   padding-bottom: 50px;  
 }
 

@@ -5,7 +5,7 @@ import Chart1 from '../components/Chart1';
 
 import Navbar from '../components/Navbar';
 import Chart2 from '../components/Chart2';
-import SeasonSelector from '../components/SeasonSelector';
+
 
 
 
@@ -32,18 +32,19 @@ function ChartsPage() {
     
      <Navbar />
      
-     <div className='content-center'>
-      <div className='chart1s'>
+     <div className=' flex items-center justify-around'>
+      {/* <div className='chart1s'> */}
+        <div className="pl-10 pb-40">
      <Chart1 />
-      <div>
-     <SeasonSelector />
      </div>
      <br></br>
+     <div>
       <Chart2 />  
-     </div>
+      </div>
+     
    
-     <div >
-       <div  className = 'TeamList bg-slate-400 rounded-xl p-2 px-5 '>
+     <div className="pt-5" >
+       <div  className = 'TeamList bg-slate-400 rounded-xl p-2 px-5  '>
        <h1 className='teamheading font-bold  text-2xl'>Team List</h1><br></br><br></br>
 
        <div>
@@ -63,15 +64,15 @@ function ChartsPage() {
           <h3 className='box'><Link to ='/charts/Kings XI Punjab' >{team?.[13]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Deccan Chargers' >{team?.[14]}</Link></h3><br/>
           <h3 className='box'><Link to ='/charts/Royal Challengers Bangalore' >{team?.[7]}</Link></h3><br/>
-          <h3 className='box'><Link to ='/charts/Chennai Super Kings' >{team?.[16]}</Link></h3><br/>
+          <h3 className='box'><Link to ='/charts/Chennai Super Kings' >{team?.[17]}</Link></h3><br/>
          
-      
+          </div>
         </div>
         </div>
       </div>
     
      </div>
-     </div>
+    //  </div>
   
     
   )

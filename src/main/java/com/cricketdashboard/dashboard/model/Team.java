@@ -18,6 +18,8 @@ public class Team {
  private String teamName;
  private long totalMatches;
  private long totalWins;
+ private int season;
+
 
     @Transient
     private List<Match> matches;
@@ -38,6 +40,8 @@ public void setTeamName(String teamName) {
 public long getTotalMatches() {
     return totalMatches;
 }
+
+
 public void setTotalMatches(long totalMatches) {
     this.totalMatches = totalMatches;
 }
@@ -64,6 +68,13 @@ public List<Match> getMatches() {
 public void setMatches(List<Match> matches) {
     this.matches = matches;
 }
+public int getSeason() {
+    return season;
+}
+public void setSeason(int season) {
+    this.season = season;
+}
+
 
  
  
